@@ -14,7 +14,7 @@ video_writer = cv2.VideoWriter("parking management.avi", cv2.VideoWriter_fourcc(
 parking_manager = solutions.ParkingManagement(
     model="yolo11n.pt",  # path to model file
     # model="yolov8n.pt",  # path to model file
-    json_file="bounding_boxes.json",  # path to parking annotations file
+    json_file="CarParkPos.json",  # path to parking annotations file
 )
 
 while cap.isOpened():
