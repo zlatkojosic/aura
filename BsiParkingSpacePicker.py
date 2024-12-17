@@ -28,13 +28,13 @@ def mouseClick(events, x, y, flags, params):
                 posList.pop(i)
                 break
 
-    with open('CarParkPos.json', 'w') as f:
+    with open('bounding_boxes.json', 'w') as f:
         json.dump(posList, f, indent=4)
 
 
 # Učitaj koordinate parkirnih mesta iz JSON fajla
 try:
-    with open('CarParkPos.json', 'r') as f:
+    with open('bounding_boxes.json', 'r') as f:
         posList = json.load(f)
 except FileNotFoundError:
     posList = []
